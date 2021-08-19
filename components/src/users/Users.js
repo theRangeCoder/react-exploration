@@ -4,7 +4,9 @@ import User from './User'
 
 class Users extends Component {
     render() {
-        return <div>test</div>
+        return (<div>
+        <User/>
+        </div>)
     }
 }
 
