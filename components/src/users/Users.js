@@ -5,7 +5,8 @@ import User from './User'
 class Users extends Component {
     render() {
         return (<div>
-        <User/>
+        <User>John</User>
+        <User age="24">James</User>
         </div>)
     }
 }

@@ -1,10 +1,10 @@
 // Functional component
 import React from 'react';
 
-const User = () => {
+const User = (props) => {
     return (
         // JSX
-        <div>user</div>
+        <div>Name: {props.children} | Age: {props.age}</div>
     )
 }
 
