@@ -17,10 +17,20 @@ class Users extends Component {
 		],
 		title: "Users list"
 	};
-			
+		
+	makeMeYounger = () => {
+		const newState = this.state.users.map((user) => {
+			const tempUser = user;
+			tempUser.age -= 10;
+			return tempUser;
+		})
+		
+		
+	}
 	
     render() {
         return (<div>
+        <button onClick={this.makeMeYounger}>Make us 10 years younger</button> <br/>
         {this.state.title}
         <User age={this.state.users[0].age}>{this.state.users[0].name}</User>
         <User age={this.state.users[1].age}>{this.state.users[1].name}</User>
