@@ -3,11 +3,27 @@ import React, {Component} from 'react';
 import User from './User'
 
 class Users extends Component {
+
+	state = {
+		users: [
+			{
+				name: "John",
+				age: 26
+			},
+			{
+				name: "James",
+				age: 24
+			}
+		],
+		title: "Users list"
+	};
+			
+	
     render() {
         return (<div>
-        {this.props.title}
-        <User age="26">John</User>
-        <User age="24">James</User>
+        {this.state.title}
+        <User age={this.state.users[0].age}>{this.state.users[0].name}</User>
+        <User age={this.state.users[1].age}>{this.state.users[1].name}</User>
         </div>)
     }
 }
