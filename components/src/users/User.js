@@ -1,4 +1,4 @@
-// Functional component
+// Functional component (stateless components)
 import React from 'react';
 
 const User = (props) => {
