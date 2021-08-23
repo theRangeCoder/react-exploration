@@ -22,6 +22,10 @@ class Users extends Component {
 		const newState = this.state.users.map((user) => {
 			const tempUser = user;
 			tempUser.age -= 10;
+			// To prevent ages from becoming negative
+			if (tempUser.age <= 0) {
+				tempUser.age += 10;
+			}
 			return tempUser;
 		});
 		
@@ -33,9 +37,12 @@ class Users extends Component {
     render() {
         return (<div>
         <button onClick={this.makeMeYounger}>Make us 10 years younger</button> <br/>
-        {this.state.title}
-        <User age={this.state.users[0].age}>{this.state.users[0].name}</User>
-        <User age={this.state.users[1].age}>{this.state.users[1].name}</User>
+        <h1>{this.state.title}</h1>
+        {
+        	this.state.users.map((user) => {
+        		return <User age={user.age}>{user.name}</User>
+        	})
+        }
         </div>)
     }
 }
