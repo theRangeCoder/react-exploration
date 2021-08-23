@@ -23,9 +23,11 @@ class Users extends Component {
 			const tempUser = user;
 			tempUser.age -= 10;
 			return tempUser;
-		})
+		});
 		
-		
+		this.setState({
+			newState
+		});
 	}
 	
     render() {
