@@ -13,12 +13,21 @@ class App extends Component {
 		})
 	}
 	
+	removeName = () => {
+		this.setState({
+			name: ""
+		})
+	}
+	
 	render() {
 		return (
 			<div className="App">
 				<br/> 
 				<br/>
-				<button onClick={this.changeName}>Change state</button>
+				<button onClick={this.changeName}>Change name</button>
+				<br/>
+				<br/>
+				<button onClick={this.removeName}>Remove name</button>
 				<br/>
 				<br/>
 				<div>{this.state.name}</div>
